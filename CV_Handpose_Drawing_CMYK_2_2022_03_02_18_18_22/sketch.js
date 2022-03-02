@@ -15,17 +15,15 @@ let pointerX, pointerY, knuckle, ring;
 let stepSize = 5;
 let myPixels = [];
 let colorPicker;
-
 let mspaint;
 
 function preload(){
   mspaint = loadImage('mspaint.png');
 }
-
 function setup() {
-  createCanvas(640, 480);
-  canvas2 = createGraphics(width, height);
-  //makesquares();
+  createCanvas(900, 700);
+  canvas2 = createGraphics(640, 480);
+  makesquares();
   video = createCapture(VIDEO);
   video.size(width, height);
 
@@ -54,14 +52,12 @@ function modelReady() {
 }
 
 function draw() {
-  image(mspaint, 0, 0, 640, 480);
- push();
+  image(mspaint, 0, 0, 900, 700);
   translate(width, 0);
   scale(-1, 1);
-  image(video, 0, 0, width, height);
-  image(canvas2, 0, 0);
-
-  pop();
+  
+  image(video, 150, 90, 640, 480);
+  image(canvas2, 150, 90);
   drawKeypoints();
 }
 
@@ -171,9 +167,9 @@ function getaverages() {
   
 }
 
-// function makesquares() {
-//   canvas2.background(255);
-//   canvas2.clear();
+function makesquares() {
+  canvas2.background(255);
+  canvas2.clear();
 //   //background(255);
 //   //clear();
 //   // canvas2.fill(0, 255, 255);
@@ -187,7 +183,7 @@ function getaverages() {
 //   // canvas2.stroke(255, 0, 0);
 //   // canvas2.strokeWeight(10);
 //   // canvas2.line(width - 5, 215, width - 65, 275);
-// }
+}
 
 
 class Pixel {
