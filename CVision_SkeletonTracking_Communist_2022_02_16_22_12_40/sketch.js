@@ -1,5 +1,6 @@
 let w = 640;
 let h = 480;
+
 let capture;
 let model;
 let skeletons;
