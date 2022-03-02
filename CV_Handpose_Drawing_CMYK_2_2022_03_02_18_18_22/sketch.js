@@ -16,6 +16,12 @@ let stepSize = 5;
 let myPixels = [];
 let colorPicker;
 
+let mspaint;
+
+function preload(){
+  mspaint = loadImage('mspaint.png');
+}
+
 function setup() {
   createCanvas(640, 480);
   canvas2 = createGraphics(width, height);
@@ -48,11 +54,14 @@ function modelReady() {
 }
 
 function draw() {
+  image(mspaint, 0, 0, 640, 480);
+ push();
   translate(width, 0);
   scale(-1, 1);
-
   image(video, 0, 0, width, height);
   image(canvas2, 0, 0);
+
+  pop();
   drawKeypoints();
 }
 
