@@ -29,7 +29,7 @@ function setup() {
 
   handpose = ml5.handpose(video, modelReady);
 colorPicker = createColorPicker('#ed225d');
-  colorPicker.position(0, height + 5);
+  colorPicker.position(10, 750); 
   // This sets up an event that fills the global variable "predictions"
   // with an array every time new hand poses are detected
   handpose.on("predict", (results) => {
