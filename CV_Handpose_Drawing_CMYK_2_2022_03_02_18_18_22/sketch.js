@@ -86,7 +86,7 @@ function drawKeypoints() {
     //If the ring finger is not extended then draw a line or pick a color
     if (knuckle < ring) {
       fill(0);
-      ellipse(pointerX+150, pointerY+90, 10, 10);
+      //ellipse(pointerX+150, pointerY+90, 10, 10);
       if (pointerX < width - 70) {
         getaverages();
 
@@ -127,7 +127,7 @@ function drawKeypoints() {
     } else {
       //If the hand is extended, then just mark where it is and clear the arrays
       fill(255);
-      ellipse(pointerX+150, pointerY+90, 10, 10);
+      //ellipse(pointerX+150, pointerY+90, 10, 10);
       leftArr.length = 0;
       topArr.length = 0;
       leftAvg = 0;
