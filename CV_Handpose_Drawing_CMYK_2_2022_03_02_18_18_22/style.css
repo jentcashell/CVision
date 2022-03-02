@@ -12,4 +12,5 @@ canvas {
 }
 body{
   background-image: url("windowsxp.jpeg");
+  background-size: cover;
 }
