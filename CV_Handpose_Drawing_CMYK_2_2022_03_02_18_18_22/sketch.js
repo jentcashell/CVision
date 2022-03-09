@@ -127,7 +127,7 @@ function drawKeypoints() {
     } else {
       //If the hand is extended, then just mark where it is and clear the arrays
       fill(255);
-      ellipse(pointerX+150, pointerY+90, 10, 10);
+      rect(pointerX+150, pointerY+90, 10, 10);
       leftArr.length = 0;
       topArr.length = 0;
       leftAvg = 0;
